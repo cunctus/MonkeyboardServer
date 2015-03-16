@@ -1,1 +1,6 @@
 #Command-List for remote connections via Socket
+
+
+Start playing a stream, first param 0 = DAB, 1 = FM Mode, second param is the DAB channel or FM frequency
+e.g. startplay 1 100600
+Will play FM frequency 100.60
