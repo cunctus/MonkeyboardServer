@@ -5,7 +5,7 @@ You need both the Monkeyboard (https://github.com/cunctus/Monkeyboard) and the M
 
 If you use eclipse/maven all dependencies will be downloaded automatically. You can also use the precompiled .jar-files from the releases. It contains all dependencies.
 
-Example for running the server on raspbian; this will start the server using the device /dev/ttyACM0, the lib keystonecomm and listen on port 23000 for TCP/IP connections. You can use e.g. telnet for connecting with the server on the port.
+Example for running the server on raspbian; this will start the server using the device /dev/ttyACM0, the lib keystonecomm and listen on port 23000 for TCP/IP connections. You can use e.g. telnet for connecting to the server on the port.
 
 sudo java -Djava.library.path=/usr/lib/ -jar MonkeyboardServer-0.0.1.jar /dev/ttyACM0 keystonecomm 23000
 
