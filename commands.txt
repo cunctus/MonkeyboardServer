@@ -1,6 +1,27 @@
-#Command-List for remote connections via Socket
+Command-List for remote connections via Socket; Use e.g. Telnet for connecting to the port you provided for starting up the server.
+
+#Start playing a stream, first param 0 = DAB, 1 = FM Mode, second param is the DAB channel or FM frequency
+startplay 1 100600 #Will play FM frequency 100.60    
+
+#Increae volume by one
+volumeup #will return the new volume
+
+#Decrease volume by one
+volumedown #will return the new volume
+
+#Set new volume, 1st param from 0 - 16
+setvolume 12 #will set new volume to 12
+
+#mute/unmute the stream
+mute
+    
+#Stop stream
+stopstream
+
+#Set stereo mode 0 = force mono, 1 = auto stereo
+setstereomode 1 #will the auto stereo
+
+#Stop stream and shutdown the server
+shutdown
 
 
-Start playing a stream, first param 0 = DAB, 1 = FM Mode, second param is the DAB channel or FM frequency
-e.g. startplay 1 100600
-Will play FM frequency 100.60
