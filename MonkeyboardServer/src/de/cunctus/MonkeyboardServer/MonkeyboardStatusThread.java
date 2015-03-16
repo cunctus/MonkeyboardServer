@@ -19,6 +19,7 @@ public class MonkeyboardStatusThread extends Thread {
 	
 	public MonkeyboardStatusThread(Monkeyboard board) {
 		this.board = board;
+		this.setDaemon(true);
 	}
 	
 	@Override
