@@ -18,6 +18,7 @@ import java.net.Socket;
 
 import de.cunctus.Monkeyboard.Monkeyboard;
 import de.cunctus.Monkeyboard.Enums.PlayMode;
+import de.cunctus.Monkeyboard.Enums.StereoMode;
 
 public class ClientHandler extends Thread {
 
@@ -32,6 +33,7 @@ public class ClientHandler extends Thread {
 		this.clientSocket = clientSocket;
 		this.board = board;
 		this.server = server;
+		this.setDaemon(true);
 	}
 
 	@Override
@@ -98,6 +100,14 @@ public class ClientHandler extends Thread {
 			case "stopstream":
 				if (board.StopStream())
 					result = "OK";
+				break;
+			case "setstereomode":
+				if (c.length < 2) {
+					result = "setstereomode [0,1]";
+					if (board.SetStereoMode(StereoMode.getByValue(Integer.valueOf(c[1]))))
+						result = "OK";
+					break;
+				}
 				break;
 			default:
 				result = "UNKNOWN COMMAND";
